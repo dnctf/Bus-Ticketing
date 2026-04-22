@@ -1,0 +1,581 @@
+/**
+ * Travel Ticket Theme - Color System Styles
+ * This file contains all color-related CSS that can be customized
+ */
+
+/* ============================================
+   Color Variables (CSS Custom Properties)
+   ============================================ */
+
+:root {
+    --travel-ticket-primary-color: #0073aa;
+    --travel-ticket-secondary-color: #005a87;
+    --travel-ticket-accent-color: #ff6b35;
+    --travel-ticket-text-color: #333333;
+    --travel-ticket-background-color: #ffffff;
+    --travel-ticket-button-color: #0073aa;
+    --travel-ticket-button-hover-color: #005a87;
+    --travel-ticket-light-bg: #f5f5f5;
+    --travel-ticket-border-color: #dddddd;
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
+
+body {
+    background-color: var(--travel-ticket-background-color);
+    color: var(--travel-ticket-text-color);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif;
+    line-height: 1.6;
+}
+
+/* ============================================
+   Links
+   ============================================ */
+
+a {
+    color: var(--travel-ticket-primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: var(--travel-ticket-secondary-color);
+    text-decoration: underline;
+}
+
+/* ============================================
+   Headings
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--travel-ticket-text-color);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+}
+
+/* ============================================
+   Buttons
+   ============================================ */
+
+.btn,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.woocommerce .button {
+    background-color: var(--travel-ticket-button-color);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover,
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+.woocommerce .button:hover {
+    background-color: var(--travel-ticket-button-hover-color);
+}
+
+.btn:focus,
+button:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+.woocommerce .button:focus {
+    outline: 2px solid var(--travel-ticket-accent-color);
+    outline-offset: 2px;
+}
+
+/* Secondary Button */
+.btn-secondary,
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--travel-ticket-primary-color);
+    color: var(--travel-ticket-primary-color);
+}
+
+.btn-secondary:hover,
+.btn-outline:hover {
+    background-color: var(--travel-ticket-primary-color);
+    color: #ffffff;
+}
+
+/* ============================================
+   Forms
+   ============================================ */
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+textarea,
+select {
+    border: 1px solid var(--travel-ticket-border-color);
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--travel-ticket-primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 115, 170, 0.1);
+}
+
+/* ============================================
+   Header & Navigation
+   ============================================ */
+
+.site-header {
+    background-color: var(--travel-ticket-primary-color);
+    color: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.site-title {
+    color: #ffffff;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.site-title a {
+    color: #ffffff;
+}
+
+.site-title a:hover {
+    color: var(--travel-ticket-accent-color);
+}
+
+.site-description {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Primary Navigation */
+.primary-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.primary-menu li {
+    margin: 0;
+}
+
+.primary-menu a {
+    color: #ffffff;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.primary-menu a:hover {
+    background-color: rgba(255, 107, 53, 0.1);
+    color: var(--travel-ticket-accent-color);
+}
+
+.primary-menu li.active a,
+.primary-menu li.current-menu-item a {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid var(--travel-ticket-accent-color);
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+
+.site-footer {
+    background-color: var(--travel-ticket-secondary-color);
+    color: #ffffff;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.site-footer a {
+    color: var(--travel-ticket-accent-color);
+    transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+    color: #ffffff;
+}
+
+.site-footer h3,
+.site-footer h4 {
+    color: #ffffff;
+}
+
+.site-footer .widget {
+    margin-bottom: 2rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   Ticket Cards
+   ============================================ */
+
+.ticket-card {
+    background-color: #ffffff;
+    border: 1px solid var(--travel-ticket-border-color);
+    border-top: 3px solid var(--travel-ticket-primary-color);
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.ticket-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 1rem;
+}
+
+.ticket-title {
+    font-size: 1.25rem;
+    color: var(--travel-ticket-text-color);
+    margin: 0;
+}
+
+.badge-featured {
+    background-color: var(--travel-ticket-accent-color);
+    color: #ffffff;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.price-tag {
+    font-size: 1.5rem;
+    color: var(--travel-ticket-accent-color);
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.ticket-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid var(--travel-ticket-border-color);
+    border-bottom: 1px solid var(--travel-ticket-border-color);
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-label {
+    font-size: 0.9rem;
+    color: rgba(51, 51, 51, 0.7);
+    margin-bottom: 0.25rem;
+}
+
+.detail-value {
+    font-weight: 600;
+    color: var(--travel-ticket-text-color);
+}
+
+.ticket-description {
+    margin: 1rem 0;
+    line-height: 1.6;
+}
+
+.ticket-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.ticket-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* ============================================
+   Language Switcher
+   ============================================ */
+
+.language-switcher-wrapper {
+    padding: 0.5rem 0;
+}
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.language-switcher label {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.travel-ticket-language-select {
+    padding: 6px 10px;
+    border: 1px solid var(--travel-ticket-border-color);
+    border-radius: 3px;
+    background-color: #ffffff;
+    color: var(--travel-ticket-text-color);
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.travel-ticket-language-select:hover {
+    border-color: var(--travel-ticket-primary-color);
+}
+
+.travel-ticket-language-select:focus {
+    outline: none;
+    border-color: var(--travel-ticket-primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 115, 170, 0.1);
+}
+
+.language-loading {
+    display: inline-block;
+    animation: dot-loading 1.4s infinite;
+}
+
+@keyframes dot-loading {
+    0%, 20%, 50%, 80%, 100% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+}
+
+/* ============================================
+   WooCommerce Integration
+   ============================================ */
+
+.woocommerce .product {
+    border: 1px solid var(--travel-ticket-border-color);
+    border-top: 3px solid var(--travel-ticket-primary-color);
+}
+
+.woocommerce .product:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.woocommerce .price {
+    color: var(--travel-ticket-accent-color);
+    font-weight: 700;
+}
+
+.woocommerce .star-rating span {
+    color: var(--travel-ticket-accent-color);
+}
+
+.woocommerce .single_add_to_cart_button {
+    background-color: var(--travel-ticket-primary-color) !important;
+}
+
+.woocommerce .single_add_to_cart_button:hover {
+    background-color: var(--travel-ticket-button-hover-color) !important;
+}
+
+/* ============================================
+   Alerts & Messages
+   ============================================ */
+
+.alert,
+.notice,
+.message {
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.alert-success,
+.notice-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-error,
+.alert-danger,
+.notice-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alert-warning,
+.notice-warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+.alert-info,
+.notice-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+/* ============================================
+   Responsive Styles
+   ============================================ */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    .primary-menu {
+        flex-direction: column;
+    }
+
+    .primary-menu a {
+        padding: 0.75rem 1rem;
+    }
+
+    .ticket-details {
+        grid-template-columns: 1fr;
+    }
+
+    .ticket-footer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .ticket-actions {
+        width: 100%;
+    }
+
+    .ticket-actions .btn {
+        flex: 1;
+    }
+}
+
+/* ============================================
+   Utility Classes
+   ============================================ */
+
+.text-primary {
+    color: var(--travel-ticket-primary-color);
+}
+
+.text-secondary {
+    color: var(--travel-ticket-secondary-color);
+}
+
+.text-accent {
+    color: var(--travel-ticket-accent-color);
+}
+
+.bg-primary {
+    background-color: var(--travel-ticket-primary-color);
+    color: #ffffff;
+}
+
+.bg-secondary {
+    background-color: var(--travel-ticket-secondary-color);
+    color: #ffffff;
+}
+
+.bg-accent {
+    background-color: var(--travel-ticket-accent-color);
+    color: #ffffff;
+}
+
+.bg-light {
+    background-color: var(--travel-ticket-light-bg);
+}
+
+.border-primary {
+    border-color: var(--travel-ticket-primary-color);
+}
+
+.border-secondary {
+    border-color: var(--travel-ticket-secondary-color);
+}
+
+.border-accent {
+    border-color: var(--travel-ticket-accent-color);
+}
+
+.shadow-sm {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.shadow {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.shadow-lg {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.rounded {
+    border-radius: 4px;
+}
+
+.rounded-lg {
+    border-radius: 8px;
+}
